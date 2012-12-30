@@ -1,0 +1,20 @@
+public class EulerFive
+{
+  public static void main ( String[] args )
+  {
+    boolean result=false;
+    int cheese = 1;
+    while(result == false){
+  	for (int i = 11; i<21; i++){
+	if(cheese%11==0 &&  cheese%13==0 && cheese%14==0 && cheese%15==0 && cheese%16==0 && cheese%17==0 && cheese%18==0 && cheese%19==0 && cheese%20==0){
+	  System.out.println(cheese);
+	  result = true;
+	}
+	cheese++;
+
+
+	}
+
+  }
+
+  }
