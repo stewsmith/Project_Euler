@@ -1,0 +1,36 @@
+#-------------------------------------------------------------------------------
+# Name:        module1
+# Purpose:
+#
+# Author:      Stewart
+#
+# Created:     24/07/2012
+# Copyright:   (c) Stewart 2012
+# Licence:     <your licence>
+#-------------------------------------------------------------------------------
+#!/usr/bin/env python
+
+#The prime factors of 13195 are 5, 7, 13 and 29.
+
+#What is the largest prime factor of the number 600851475143 ?
+import math
+
+def is_prime(x):
+    if x%2 ==0 or x%3 == 0 or x%5==0 or x%7==0:
+        return False
+
+    var = 2
+    limit = x/2
+    while var < limit:
+        if x%var == 0:
+            return False
+        var = var + 1
+    return True
+
+fact = 1
+while fact < math.sqrt(600851475143):
+        if 600851475143%fact == 0:
+         if is_prime(fact):
+            print fact
+        fact = fact + 1
+
