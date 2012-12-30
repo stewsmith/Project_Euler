@@ -1,0 +1,35 @@
+
+
+
+public class Palindrome
+{
+
+
+  public static void main ( String[] args )
+  {
+    int result=0;
+    for(int i=1; i< 1000; i++){
+  	for(int j=1; j<1000; j++){
+			if(isPalin(i,j) && i*j > result){
+				result = (i*j);
+			}
+
+		}
+
+	}
+	System.out.println(result);
+
+  }
+  public static boolean isPalin(int a, int b){
+	  int mult= a*b;
+	  String bam = "";
+	  bam = Integer.toString(mult);
+	  String notYet = "";
+	  for(int p=bam.length(); p>=1; p--){
+		  notYet = notYet + bam.substring(p-1,p);
+	  }
+	  if(notYet.equals(bam)) return true;
+	  else return false;
+  }
+}
+
