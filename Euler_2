@@ -28,7 +28,7 @@ def fib_even(limit, x, n):
         x = x + n
         n = n + x
 
-    return x , n , res
+    return res
 
 print fib_even(4000000, 1,  2)
 
