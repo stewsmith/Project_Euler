@@ -1,0 +1,25 @@
+#-------------------------------------------------------------------------------
+# Name:        Euler_20
+# Purpose:      Euler #20
+#
+# Author:      Stewart
+#
+# Created:     23/07/2012
+# Copyright:   (c) Stewart 2012
+# Licence:     <your licence>
+#-------------------------------------------------------------------------------
+#!/usr/bin/env python
+
+def factorial(x):
+    goal =1
+    j = x
+    while j > 1:
+        goal = goal * j
+        j -= 1
+    return goal
+
+converted = str(factorial(100))
+sum = 0
+for n in converted:
+    sum += int(n)
+print sum
