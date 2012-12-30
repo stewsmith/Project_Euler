@@ -1,0 +1,20 @@
+#-------------------------------------------------------------------------------
+# Name:        Euler_1
+# Purpose:
+#
+# Author:      Stewart
+#
+# Created:     23/07/2012
+# Copyright:   (c) Stewart 2012
+# Licence:     <your licence>
+#-------------------------------------------------------------------------------
+#!/usr/bin/env python
+
+var=1
+res=0
+
+while var<1000:
+    if var%3 == 0 or var%5 == 0:
+         res = res + var
+    var=var+1
+print res
