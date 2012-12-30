@@ -1,0 +1,27 @@
+
+one = 3
+two = 3
+three = 5
+four = 4
+five = 4
+six = 3
+seven = 5
+eight = 5
+nine = 4
+one_nine = 36
+ten_nineteen = 70
+twenty = 6
+thirty = 6
+forty = 5
+fifty = 5
+sixty = 5
+seventy = 7
+eighty = 6
+ninety = 6
+hundred_and = 10
+
+one_ninety_nine = (one_nine + ten_nineteen + 10*(twenty + thirty + forty +
+                 fifty + sixty + seventy + eighty + ninety) + 8*one_nine)
+print one_ninety_nine
+print ((one + two+ three+ four+ five + six + seven + eight + nine)*100 + 7*9  + hundred_and*891 + 11 + one_ninety_nine*10 )
+
