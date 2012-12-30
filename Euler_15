@@ -1,0 +1,16 @@
+#Euler number 15
+# July 22, 2012
+# horizontal == 1, vertical == 0
+# produces a combinatorics problem
+
+def factorial(x):
+    goal =1
+    j = x
+    while j > 1:
+        goal = goal * j
+        j -= 1
+    return goal
+
+print factorial(40) / (factorial(20) * factorial(20))
+
+print factorial(100)
