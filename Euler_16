@@ -1,0 +1,15 @@
+# I had to converet 2^1000 to a string in order to run through its digits,
+# then convert it back to an integer to add them up
+start =2**1000
+strStart = str(start)
+i = 0
+goal = 0
+
+while i < len(strStart):
+    goal = goal + int(strStart[i])
+    i += 1
+
+print goal
+
+
+
