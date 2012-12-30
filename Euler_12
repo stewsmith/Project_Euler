@@ -1,0 +1,29 @@
+public class EulerTwelve
+
+
+{
+
+  public static void main ( String[] args )
+  {
+    int sum = 0;
+	  for (int i=1; i<555555555L; i++){
+		  sum+=i;
+		if(fiveHundred(sum)){
+			System.out.println(sum);
+			break;
+		}
+  }
+}
+
+  //fiveHundred method determines if a number has more than five hundred factors
+  public static boolean fiveHundred (long num){
+	  int count = 0;
+	  int limit = (int)Math.sqrt(num);
+	  for(int i=2; i<=limit; i++){
+		  if(num%i == 0) count++;
+	  }
+	  if (count*2 > 499) return true;
+	  else return false;
+  }
+
+}
