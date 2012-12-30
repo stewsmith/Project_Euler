@@ -1,0 +1,43 @@
+/**
+The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+Find the sum of all the primes below two million.
+1179908154
+*/
+
+public class EulerTen
+
+
+{
+  public static void main ( String[] args )
+  {
+    long sum = 17;
+	  for(int i=10; i<=2000000; i++){
+		  if(isPrime(i)) sum = sum + i;
+	  }
+	  System.out.println(sum);
+
+  }
+
+
+public static boolean isPrime ( int num )
+  {
+    boolean prime = true;
+    int limit = (int) Math.sqrt ( num );
+    //makes prime detection faster but not able to detect first 4 primes (2,3,5,7)
+    if(num%2==0 || num%3==0  || num%5==0 || num%7==0) prime = false;
+
+	if(prime == true){
+    	for ( int i = 3; i <= limit; i+=2 )
+    	{
+      		if ( num % i == 0 )
+      			{
+        			prime = false;
+					break;
+     			 }
+    	}
+	}
+    return prime;
+  }
+
+}
