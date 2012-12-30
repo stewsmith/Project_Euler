@@ -1,0 +1,31 @@
+#-------------------------------------------------------------------------------
+# Name:        Euler_48
+# Purpose:
+#
+# Author:      Stewart
+#
+# Created:     26/07/2012
+# Copyright:   (c) Stewart 2012
+# Licence:     <your licence>
+#-------------------------------------------------------------------------------
+#!/usr/bin/env python
+
+"""
+The series, 11 + 22 + 33 + ... + 1010 = 10405071317.
+
+Find the last ten digits of the series, 11 + 22 + 33 + ... + 10001000.
+
+"""
+
+result = 0
+base = 1
+power = 1
+
+
+while base < 1001:
+    result += base**power
+    base += 1
+    power += 1
+
+intermed = str(result)
+print intermed[-10 : len(intermed)]
