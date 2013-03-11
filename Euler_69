@@ -1,0 +1,33 @@
+
+public class prob_69 {
+
+  /**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		double tMax = 0;
+		int ans = 0;
+		for (int i=2; i<1000000; i++){
+			if(i%2!=0 || i%3!=0 || i%5!=0 || i%7!=0 || i%11!=0 ) || i%13!=0 || i%17!=0)
+				continue;     //optimization--answer also equal to the product of these primes
+			double tRat = 1;
+			int k = i;
+			//TOTIENT FUNCTION
+			for(int j=2; j<=k; j++){
+				if(k%j == 0){  //input is a factor of i 
+					tRat *= (j/(double)(j-1));	//Euler's product formula
+					while(k % j == 0){	//reduce input by that factor
+						k /= j;
+					}
+				}
+				if(tRat > tMax){
+					tMax = tRat;
+					ans = i;
+					System.out.println("max rat " + tMax);
+					System.out.println("temp ans is: " + ans);
+				}
+			}
+		}
+		System.out.println("ans is "+ans);
+	}
+}
